@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -34,22 +32,16 @@ body {
 }
 
 .head-tabs div {
-  padding: 10px 50px;
+  padding: 10px 0;
+  flex: 1;
   background-color: white;
   font-family: "Montserrat", sans-serif;
-}
-
-.head-tabs div:hover,
-button:hover {
-  cursor: pointer;
-}
-
-#phrase {
-  background-color: #92e4fd;
+  text-align: center;
 }
 
 textarea {
-  width: 525px;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 18px;
   outline: none;
   padding: 10px 12px;
@@ -64,14 +56,19 @@ button {
 }
 
 button:hover {
-  background-color: #c7bef9;
+  background-color: #92E4FD;
   color: white;
+}
+
+#phrase {
+  background-color: #92e4fd;
 }
 
 input {
   outline: none;
   font-size: 18px;
-  width: 475px;
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 12px;
   margin-top: 10px;
   display: block;
@@ -83,23 +80,22 @@ input {
 }
 
 .form {
-  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 560px) {
   textarea,
   input {
-    width: 80vw;
-  }
-
-  .head-tabs {
-    width: 80vw;
+    width: 100%;
   }
 
   .head-tabs div {
-    width: 28vw !important;
-    text-align: center;
-    padding: 10px 0;
+    font-size: 14px;
   }
 }
 
